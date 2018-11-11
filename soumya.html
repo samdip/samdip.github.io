@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Soumya Padhya</title>
+        <link rel="stylesheet" href="smain.css"/>
+    </head>
+    <body>
+        <div id="header" class="header">
+            <label id="name" > Soumya SAP SCM MM </label>
+            <h3 id="tag" > This is my tagline - One stop for freshres </h3>
+        </div>
+        
+        <div id = "body" class="body">
+            
+            <div id="profile">
+                
+                <img src="img4.jpg" >
+                
+                <div id="about">
+                    My name is Soumya Padhya <br/>
+                    I am SAP Profeshional at Accanture <br/>
+                    I love to <br/>
+                    I love to share my knowldge <br/>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <div  id="footer" class="footer">
+            
+        </div>
+        
+        <script type="text/javascript">
+
+            var nameStr = document.getElementById("name").innerHTML;
+            
+            function nameAnimLoopFun(index)
+            {
+                if(index==nameStr.length){
+                    document.getElementById("name").innerHTML = "";
+                    index=-1;
+                }else{
+                    document.getElementById("name").innerHTML += nameStr.charAt(index);
+                    
+                }
+                                                     
+                window.setTimeout(nameAnimLoopFun,600,index + 1);
+            }
+            
+            document.getElementById("name").innerHTML = "";
+            nameAnimLoopFun(0);
+            
+        </script>
+    </body>
+</html>
